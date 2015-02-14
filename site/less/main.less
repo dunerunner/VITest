@@ -1,0 +1,171 @@
+/* RESET CSS */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Variables */
+
+
+@mainFont: Arial;
+@mainFontSize: 16;
+
+@mainColor: #000;
+@secondaryColor:#333;
+@blankColor: #fff;
+/* Mixins */
+
+.clearfix() {
+    &:after{
+        clear: both;
+        content: "";
+        display: block;
+    }
+}
+
+/* Page Layout */
+body {
+    min-height:100vh;
+    font:unit(@mainFontSize, px)/unit((2 + @mainFontSize), px) @mainFont;
+    color:@mainColor;
+}
+section {
+    padding:10px;
+    .clearfix();
+}
+.b {
+    &-content {
+        width:960px;
+        height:100%;
+        margin:auto;
+    }
+    &-section-header {
+        margin:10px 0;
+        font-size:1.3em;
+        font-weight:bold;
+        text-shadow:1px 1px 5px rgba(0,0,0,0.5);
+        color:@secondaryColor;
+    }
+    &-control-input, &-control-addbtn {
+        display:inline-block;
+        float:left;
+    }
+    &-control-input {
+        height:25px;
+        width:300px;
+        box-sizing:border-box;
+        border:1px solid @secondaryColor;
+        border-radius:3px;
+        padding:3px 10px;
+    }
+    &-control-addbtn {
+        height:25px;
+        width:50px;
+        margin:0 10px;
+        border:1px solid @secondaryColor;
+        border-radius:3px;
+        color:@blankColor;
+        background:@mainColor;
+        &:active {
+            color:@mainColor;
+            background:@blankColor;
+        }
+    }
+    &-todo-list {
+        margin:10px 0;
+        list-style-type: none;
+    }
+    &-todo-item {
+        display:table;
+        width:100%;
+        margin:10px 0;
+        border:1px solid @secondaryColor;
+        border-radius:3px;
+        &__title {
+            display:table-cell;
+            width:60%;
+            box-sizing:border-box;
+            padding:0 10px;
+            font-weight:bold;
+            line-height:30px;
+            color:@secondaryColor;
+        }
+        &__author {
+            display:table-cell;
+            width:20%;
+            box-sizing:border-box;
+            padding:0 10px;
+            text-align:center;
+            font-weight:bold;
+            line-height:30px;
+            text-decoration:none;
+            color:@secondaryColor;
+            &:hover {
+                text-decoration:underline;
+            }
+        }
+        &__date {
+            display:table-cell;
+            width:10%;
+            box-sizing:border-box;
+            padding:0 10px;
+            text-align:center;
+            line-height:30px;
+        }
+        &__removebtn {
+            display:table-cell;
+            width:10%;
+            box-sizing:border-box;
+            margin:5px 0;
+            padding:0 10px;
+            text-align:center;
+            line-height:20px;
+            text-decoration:none;
+            color:@blankColor;
+            background:@mainColor;
+            &:hover {
+                background:@secondaryColor;
+            }
+        }
+    }
+}

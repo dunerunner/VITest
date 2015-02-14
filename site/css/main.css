@@ -1,0 +1,237 @@
+/* RESET CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Variables */
+/* Mixins */
+/* Page Layout */
+body {
+  min-height: 100vh;
+  font: 16px/18px Arial;
+  color: #000000;
+}
+section {
+  padding: 10px;
+}
+section:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.b-content {
+  width: 960px;
+  height: 100%;
+  margin: auto;
+}
+.b-section-header {
+  margin: 10px 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  color: #333333;
+}
+.b-control-input,
+.b-control-addbtn {
+  display: inline-block;
+  float: left;
+}
+.b-control-input {
+  height: 25px;
+  width: 300px;
+  box-sizing: border-box;
+  border: 1px solid #333333;
+  border-radius: 3px;
+  padding: 3px 10px;
+}
+.b-control-addbtn {
+  height: 25px;
+  width: 50px;
+  margin: 0 10px;
+  border: 1px solid #333333;
+  border-radius: 3px;
+  color: #ffffff;
+  background: #000000;
+}
+.b-control-addbtn:active {
+  color: #000000;
+  background: #ffffff;
+}
+.b-todo-list {
+  margin: 10px 0;
+  list-style-type: none;
+}
+.b-todo-item {
+  display: table;
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid #333333;
+  border-radius: 3px;
+}
+.b-todo-item__title {
+  display: table-cell;
+  width: 60%;
+  box-sizing: border-box;
+  padding: 0 10px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #333333;
+}
+.b-todo-item__author {
+  display: table-cell;
+  width: 20%;
+  box-sizing: border-box;
+  padding: 0 10px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 30px;
+  text-decoration: none;
+  color: #333333;
+}
+.b-todo-item__author:hover {
+  text-decoration: underline;
+}
+.b-todo-item__date {
+  display: table-cell;
+  width: 10%;
+  box-sizing: border-box;
+  padding: 0 10px;
+  text-align: center;
+  line-height: 30px;
+}
+.b-todo-item__removebtn {
+  display: table-cell;
+  width: 10%;
+  box-sizing: border-box;
+  margin: 5px 0;
+  padding: 0 10px;
+  text-align: center;
+  line-height: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  background: #000000;
+}
+.b-todo-item__removebtn:hover {
+  background: #333333;
+}
+/*# sourceMappingURL=main.css.map */
